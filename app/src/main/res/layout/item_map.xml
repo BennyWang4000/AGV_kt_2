@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="MapItem"
+            type="com.example.agv_kt.utils.map.MapItem" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/layoutMapItem"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_gravity="center">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lineMapItemTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lineMapItemBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lineMapItemStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lineMapItemEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9"/>
+
+<!--    <TextView-->
+<!--        android:id="@+id/textMapItemColumns"-->
+<!--        android:text="C"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toTopOf="@id/lineMapItemTop"-->
+<!--        app:layout_constraintStart_toStartOf="@id/lineMapItemStart"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/textMapItemDot"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textMapItemDot"-->
+<!--        android:text=" , "-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintStart_toEndOf="@id/textMapItemColumns"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/textMapItemRows"-->
+<!--        app:layout_constraintTop_toTopOf="@id/textMapItemColumns"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/textMapItemColumns"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textMapItemRows"-->
+<!--        android:text="R"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toTopOf="@id/textMapItemColumns"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/textMapItemColumns"-->
+<!--        app:layout_constraintStart_toEndOf="@id/textMapItemDot"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/lineMapItemEnd"/>-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imgMapItemVehiclePosition"-->
+<!--        android:visibility="invisible"-->
+<!--        android:src="@drawable/ic_baseline_check_circle_24"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/textMapItemColumns"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/lineMapItemEnd"-->
+<!--        app:layout_constraintStart_toStartOf="@id/lineMapItemStart"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/lineMapItemBottom"/>-->
+
+    <ImageButton
+        android:id="@+id/btnMapItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/lineMapItemTop"
+        app:layout_constraintEnd_toEndOf="@id/lineMapItemEnd"
+        app:layout_constraintStart_toStartOf="@id/lineMapItemStart"
+        app:layout_constraintBottom_toBottomOf="@id/lineMapItemBottom"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

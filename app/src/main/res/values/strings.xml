@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">AGV_kt</string>
+
+    <string name="GETTING_ATTRIBUTE">取得AGV狀態資料</string>
+    <string name="SERVO_ON">Servo ON(鎖定馬達模式)</string>
+    <string name="SERVO_OFF">Servo OFF(馬達解鎖模式)</string>
+    <string name="TURN_RIGHT_90_DEGREES">右轉90度</string>
+    <string name="TURN_RIGHT_180_DEGREES">右轉180度</string>
+    <string name="TURN_LEFT_90_DEGREES">左轉90度</string>
+    <string name="TURN_LEFT_180_DEGREES">左轉180度</string>
+    <string name="TURN_RIGHT_90_DEGREES_DISK_FIXED">右轉90度(轉盤不動)</string>
+    <string name="TURN_RIGHT_180_DEGREES_DISK_FIXED">右轉180度(轉盤不動)</string>
+    <string name="TURN_LEFT_90_DEGREES_DISK_FIXED">左轉90度(轉盤不動)</string>
+    <string name="TURN_LEFT_180_DEGREES_DISK_FIXED">左轉180度(轉盤不動)</string>
+    <string name="DISK_TURN_RIGHT_90_DEGREES">轉盤右轉90度</string>
+    <string name="DISK_TURN_RIGHT_180_DEGREES">轉盤右轉180度</string>
+    <string name="DISK_TURN_LEFT_90_DEGREES">轉盤左轉90度</string>
+    <string name="DISK_TURN_LEFT_180_DEGREES">轉盤左轉180度</string>
+    <string name="RAISING_DISK">轉盤上升(含自動對位)</string>
+    <string name="DROPPING_DISK">轉盤下降(含自動對位)</string>
+    <string name="EMERGENCY_STOP">緊急停止</string>
+    <string name="PAUSE_SCRIPT">腳本暫停</string>
+    <string name="CONTINUE_SCRIPT">腳本繼續</string>
+    <string name="STOP_SCRIPT">腳本停止</string>
+    <string name="MOVING_WHILE_FIXING">邊走邊修(直走) 1000~50000 mm</string>
+    <string name="MOVING_FORWARD_TO_CHARGING_FOR_MM">前進充電站 0~1000 mm</string>
+    <string name="LEAVING_CHARGING_STATION_FOR_MM">離開充電站 0~1000 mm</string>
+    <string name="EXECUTE_SCRIPT">執行腳本</string>
+    <string name="cancel">取消</string>
+    <string name="execute">執行</string>
+
+
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.agv_kt.ui.directors.DirectorsViewModel" />
+        <variable
+            name="cmd"
+            type="com.example.agv_kt.utils.cmd.Command" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/btnDirPower"
+            android:src="@drawable/ic_baseline_power_settings_new_24"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="@{() -> viewModel.powerUp()}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lineDirUponDirections"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <ImageButton
+            android:id="@+id/btnDirGoUp"
+            android:rotation="180"
+            android:onClick="@{() -> viewModel.clickCommand(cmd.MOVING_WHILE_FIXING)}"
+            android:src="@drawable/ic_baseline_arrow_circle_down_48"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/lineDirUponDirections" />
+
+        <ImageButton
+            android:id="@+id/btnDirGoLeft"
+            android:rotation="270"
+            android:onClick="@{() -> viewModel.clickCommand(cmd.TURN_LEFT_90_DEGREES)}"
+            android:src="@drawable/ic_baseline_rotate_left_48"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/btnDirGoUp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintTop_toBottomOf="@id/btnDirGoUp" />
+
+        <ImageButton
+            android:id="@+id/btnDirGoRight"
+            android:rotation="90"
+            android:onClick="@{() -> viewModel.clickCommand(cmd.TURN_RIGHT_90_DEGREES)}"
+            android:src="@drawable/ic_baseline_rotate_right_48"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnDirGoUp"
+            app:layout_constraintTop_toBottomOf="@id/btnDirGoUp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

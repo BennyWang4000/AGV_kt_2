@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.agv_kt.ui.map.MapViewModel" />
+        <variable
+            name="constant"
+            type="com.example.agv_kt.utils.Constant" />
+        <variable
+            name="cmd"
+            type="com.example.agv_kt.utils.cmd.Command" />
+    </data>
+
+<!--    <data>-->
+<!--        <variable-->
+<!--            name="adapter"-->
+<!--            type="com.example.agv_kt.ui.map.adapter.MapRecyclerAdapter" />-->
+<!--    </data>-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnMapPositive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:onClick="@{() -> viewModel.cancel()}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnMapNegative"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerMap" />
+
+        <Button
+            android:id="@+id/btnMapNegative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/execute"
+            android:onClick="@{() -> viewModel.btnClick(cmd.EXECUTE_SCRIPT)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnMapPositive"
+            app:layout_constraintTop_toBottomOf="@id/recyclerMap" />
+
+        <TextView
+            android:id="@+id/textMapIsDiskFixed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="是否固定轉盤"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/toggleMapIsDiskFixed"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnMapNegative" />
+
+        <ToggleButton
+            android:id="@+id/toggleMapIsDiskFixed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/textMapIsDiskFixed"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textMapIsDiskFixed"
+            app:layout_constraintTop_toTopOf="@id/textMapIsDiskFixed" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </layout>
